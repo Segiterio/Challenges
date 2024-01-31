@@ -1,0 +1,120 @@
+@font-face {
+     font-family: "Work Sans";
+     src: url("./assets/fonts/static/WorkSans-Regular.ttf");
+}
+
+@font-face {
+     font-family: "Work Sans Bold";
+     src: url("./assets/fonts/static/WorkSans-bold.ttf");
+}
+
+
+@font-face {
+     font-family: "Work Sans semibold";
+     src: url("./assets/fonts/static/WorkSans-semibold.ttf");
+}
+
+*,
+*::before,
+*::after {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     overflow-x: hidden;
+}
+
+.wrapper {
+     min-height: 100vh;
+     background-color: #f9eeff;
+}
+
+.wrapper > .bg-design {
+     display: flex;
+     border: 1px solid;
+     min-height:230px;
+     max-height: 300px;
+}
+
+.bg-design > img {
+      width: 100%;
+      object-fit: cover;
+}
+
+
+.faq-container {
+     margin: 0 auto;
+     max-width: 600px;
+     width: 90%;
+     border-radius: 1rem;
+     box-shadow: 4px 6px 10px 5px rgb(235, 219, 245, .3);
+     padding: 1.5rem;
+     background-color: white;
+     position: relative;
+     top: -120px
+}
+
+.faq-header {
+     display: flex;
+     gap: 1rem;
+     margin-block-end: 1rem;
+}
+
+.faq-header>h2 {
+     font-size: 2.25rem;
+     font-family: "Work Sans bold";
+     color: #301534;
+}
+
+.faq-content {
+     border-bottom: 2px solid #f4f4f4;
+     display: flex;
+     flex-direction: column;
+}
+
+.faq-content:last-of-type {
+     border-bottom: none;
+}
+
+.faq-content>.question {
+     font-family: "Work Sans semibold";
+     display: flex;
+     gap: 1rem;
+     justify-content: space-between;
+     align-items: flex-start;
+     cursor: pointer;
+     padding-block: 1rem;
+}
+
+.question > img {
+      flex-shrink: 0;
+}
+
+.question>p {
+     color: #301534;
+     font-size: 18px;
+}
+
+.question:hover>p {
+     color: #902bb9;
+}
+
+.answer {
+     overflow: hidden;
+     max-height: 0;
+     transition: max-height .3s linear;
+     color: #a296a4;
+     font-family: "Work Sans";
+     font-size: 16px;
+}
+
+.answer > p {
+     padding-bottom: 1rem;
+}
+
+@media screen and (min-width:768px) {
+     .wrapper>.bg-design {
+          width: 100%;
+          overflow: hidden;
+
+     }
+}
